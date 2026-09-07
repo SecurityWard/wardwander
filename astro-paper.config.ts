@@ -27,7 +27,6 @@ export default defineAstroPaperConfig({
   },
   socials: [
     { name: "github", url: "https://github.com/SecurityWard" },
-    { name: "mail", url: "mailto:skylar.blackboxllc@gmail.com" },
   ],
   shareLinks: [
     { name: "linkedin", url: "https://www.linkedin.com/sharing/share-offsite/?url=" },

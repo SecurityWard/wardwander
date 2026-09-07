@@ -17,4 +17,4 @@ Posts show up when I have something worth saying, which is not on a schedule. To
 
 ## Elsewhere
 
-Code and security projects are on [GitHub](https://github.com/SecurityWard). If you want to reach me, the mail icon in the footer works.
+Code and security projects are on [GitHub](https://github.com/SecurityWard).
