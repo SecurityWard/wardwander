@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.astro/
+.wrangler/
+public/pagefind/
+.env
+.DS_Store
