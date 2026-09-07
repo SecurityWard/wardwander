@@ -3,7 +3,8 @@
 @layer base {
   /* ===== Override default Tailwind Typography styles ===== */
   .app-prose {
-    @apply prose;
+    @apply prose prose-lg;
+    font-family: var(--font-body);
 
     h1,
     h2,
@@ -13,8 +14,12 @@
       @apply text-foreground mb-3;
     }
 
+    h2 {
+      @apply mt-12 text-3xl;
+    }
+
     h3 {
-      @apply italic;
+      @apply text-2xl italic;
     }
 
     p,
@@ -94,7 +99,10 @@
     }
 
     blockquote {
-      @apply border-s-accent/80 wrap-break-word opacity-80;
+      @apply border-s-accent/80 wrap-break-word;
+      font-family: var(--font-display);
+      font-style: italic;
+      color: var(--muted-foreground);
     }
 
     details:not(.callout) {
@@ -112,11 +120,8 @@
 
   /* ===== Code Blocks & Syntax Highlighting ===== */
   .astro-code {
-    @apply outline-border flex border bg-(--shiki-light-bg) text-(--shiki-light) [&_span]:text-(--shiki-light);
-  }
-
-  html[data-theme="dark"] .astro-code {
-    @apply bg-(--shiki-dark-bg) text-(--shiki-dark) [&_span]:text-(--shiki-dark);
+    @apply outline-border flex border bg-(--shiki-dark-bg) text-(--shiki-dark) [&_span]:text-(--shiki-dark);
+    font-size: 0.9rem;
   }
 
   /* Styles for Shiki transformers */

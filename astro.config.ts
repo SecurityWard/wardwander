@@ -60,8 +60,68 @@ export default defineConfig({
   },
   fonts: [
     {
+      name: "IM Fell English",
+      cssVariable: "--font-display",
+      provider: fontProviders.local(),
+      fallbacks: ["Georgia", "serif"],
+      options: {
+        variants: [
+          {
+            weight: 400,
+            style: "normal",
+            src: ["./src/assets/fonts/im-fell-english-latin-400-normal.woff"],
+          },
+          {
+            weight: 400,
+            style: "italic",
+            src: ["./src/assets/fonts/im-fell-english-latin-400-italic.woff"],
+          },
+        ],
+      },
+    },
+    {
+      name: "EB Garamond",
+      cssVariable: "--font-body",
+      provider: fontProviders.local(),
+      fallbacks: ["Georgia", "serif"],
+      options: {
+        variants: [
+          {
+            weight: 400,
+            style: "normal",
+            src: ["./src/assets/fonts/eb-garamond-latin-400-normal.woff"],
+          },
+          {
+            weight: 400,
+            style: "italic",
+            src: ["./src/assets/fonts/eb-garamond-latin-400-italic.woff"],
+          },
+          {
+            weight: 500,
+            style: "normal",
+            src: ["./src/assets/fonts/eb-garamond-latin-500-normal.woff"],
+          },
+          {
+            weight: 600,
+            style: "normal",
+            src: ["./src/assets/fonts/eb-garamond-latin-600-normal.woff"],
+          },
+          {
+            weight: 600,
+            style: "italic",
+            src: ["./src/assets/fonts/eb-garamond-latin-600-italic.woff"],
+          },
+          {
+            weight: 700,
+            style: "normal",
+            src: ["./src/assets/fonts/eb-garamond-latin-700-normal.woff"],
+          },
+        ],
+      },
+    },
+    {
       name: "IBM Plex Mono",
-      cssVariable: "--font-app-mono",
+      cssVariable: "--font-mono",
       provider: fontProviders.local(),
       fallbacks: ["ui-monospace", "monospace"],
       options: {
@@ -75,16 +135,6 @@ export default defineConfig({
             weight: 400,
             style: "italic",
             src: ["./src/assets/fonts/ibm-plex-mono-latin-400-italic.woff"],
-          },
-          {
-            weight: 500,
-            style: "normal",
-            src: ["./src/assets/fonts/ibm-plex-mono-latin-500-normal.woff"],
-          },
-          {
-            weight: 600,
-            style: "normal",
-            src: ["./src/assets/fonts/ibm-plex-mono-latin-600-normal.woff"],
           },
           {
             weight: 700,

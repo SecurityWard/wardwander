@@ -7,7 +7,7 @@ I'm Skylar Simmons. I've spent close to two decades in offensive security and th
 
 On the other side of the table, I run BlackBoxGames, a small press for tabletop RPG zines and games. I write adventures, design skirmish rules, build foam dungeon terrain, and play more Commander than I should admit.
 
-## Why "WardWander"
+## Why "Ward & Wander"
 
 The security work lives under the SecurityWard name. The games live under BlackBoxGames. This site is for the writing that doesn't fit cleanly in either bucket, and for the surprising amount that fits in both. Deception operations and dungeon design are the same discipline pointed in different directions. Threat modeling is just a very serious encounter table. A ward is what you defend. A wander is how you find out what's actually out there.
 

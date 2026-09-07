@@ -11,6 +11,58 @@
     scrollbar-width: auto;
     scrollbar-color: var(--color-muted) transparent;
   }
+  html {
+    color-scheme: dark;
+    background: var(--background);
+  }
+  body {
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+  /* Torchlight vignette: lit from the top middle, falling off toward the edges. */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background-image:
+      radial-gradient(
+        ellipse 90% 70% at 50% 0%,
+        rgba(217, 149, 60, 0.07),
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 120% 100% at 50% 50%,
+        transparent 40%,
+        rgba(0, 0, 0, 0.55) 100%
+      );
+  }
+  /* Stone grain. A single SVG noise tile at low opacity, no images to fetch. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.16;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.85 0 0 0 0 0.78 0 0 0 0 0.62 0 0 0 0.5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+  }
+  code,
+  kbd,
+  pre,
+  samp {
+    font-family: var(--font-mono);
+  }
   a,
   button,
   #main-content {
@@ -19,6 +71,10 @@
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
+  }
+  ::selection {
+    background: var(--accent);
+    color: var(--accent-foreground);
   }
 }
 
@@ -31,9 +87,37 @@
 }
 
 @utility active-nav {
-  @apply underline decoration-wavy decoration-2 underline-offset-8;
+  @apply text-accent;
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+}
+
+@utility font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Small caps label in the mono face, for dates and section markers. */
+@utility label-caps {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
 }
 
 :target {
   scroll-margin-block: 1rem;
+}
+
+/* Drop cap on the first paragraph of a post. */
+.app-prose[data-dropcap] > p:first-of-type::first-letter {
+  font-family: var(--font-display);
+  float: left;
+  font-size: 3.6em;
+  line-height: 0.8;
+  padding-right: 0.08em;
+  padding-top: 0.08em;
+  color: var(--accent);
 }

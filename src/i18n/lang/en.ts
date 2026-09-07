@@ -29,9 +29,9 @@ export default {
   },
   home: {
     socialLinks: "Social Links",
-    featured: "Featured",
-    recentPosts: "Recent Posts",
-    allPosts: "All Posts",
+    featured: "Pinned",
+    recentPosts: "Latest entries",
+    allPosts: "Every entry",
   },
   footer: {
     copyright: "Copyright",
@@ -42,16 +42,16 @@ export default {
     tagDesc: "All the articles with the tag",
 
     tagsTitle: "Tags",
-    tagsDesc: "All the tags used in posts.",
+    tagsDesc: "Entries by subject.",
 
     postsTitle: "Posts",
-    postsDesc: "All the articles I've posted.",
+    postsDesc: "Everything, newest first.",
 
     archivesTitle: "Archives",
-    archivesDesc: "All the articles I've archived.",
+    archivesDesc: "Entries by year and month.",
 
     searchTitle: "Search",
-    searchDesc: "Search any article ...",
+    searchDesc: "Search the archive.",
   },
   a11y: {
     skipToContent: "Skip to content",
@@ -64,8 +64,8 @@ export default {
     goToNextPage: "Go to next page",
   },
   notFound: {
-    title: "404 Not Found",
-    message: "Page Not Found",
-    goHome: "Go back home",
+    title: "404",
+    message: "This corridor ends in solid rock.",
+    goHome: "Back to the entrance",
   },
 } satisfies UIStrings;

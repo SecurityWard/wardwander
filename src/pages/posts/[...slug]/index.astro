@@ -1,4 +1,5 @@
 ---
+import Rule from "@/components/Rule.astro";
 import { type CollectionEntry, getCollection, render } from "astro:content";
 import PostLayout from "@/layouts/PostLayout.astro";
 import Header from "@/components/Header.astro";
@@ -113,14 +114,7 @@ const ogImage = ogImageUrl
     class:list={["app-layout", { "mt-8": !config.features.showBackButton }]}
     data-pagefind-body
   >
-    <h1
-      style={{ viewTransitionName: toTransitionName(post.id) }}
-      class="text-accent inline-block text-2xl font-bold sm:text-3xl"
-    >
-      {title}
-    </h1>
-
-    <div class="my-2 flex items-center gap-2">
+    <div class="mt-2 mb-3 flex items-center gap-2">
       <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
       <span
         aria-hidden="true"
@@ -134,12 +128,24 @@ const ogImage = ogImageUrl
       <EditPost {hideEditPost} {post} class="max-sm:hidden" />
     </div>
 
+    <h1
+      style={{ viewTransitionName: toTransitionName(post.id) }}
+      class="font-display text-foreground text-4xl leading-tight sm:text-5xl"
+    >
+      {title}
+    </h1>
+    <p class="font-display text-muted-foreground mt-3 text-xl italic">
+      {description}
+    </p>
+    <Rule class="mt-6" />
+
     <article
       id="article"
+      data-dropcap
       class:list={[
         "mt-8 w-full",
         "app-prose max-w-app",
-        "prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)",
+        "prose-pre:bg-(--shiki-dark-bg)",
       ]}
     >
       <Content />

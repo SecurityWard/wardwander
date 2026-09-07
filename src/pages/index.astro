@@ -1,4 +1,5 @@
 ---
+import Rule from "@/components/Rule.astro";
 import { getCollection } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import IconRss from "@/assets/icons/IconRss.svg";
@@ -13,7 +14,7 @@ import { getSortedPosts } from "@/utils/getSortedPosts";
 import { useTranslations } from "@/i18n";
 import config from "@/config";
 
-const { socials, posts: postsConfig } = config;
+const { posts: postsConfig } = config;
 
 const locale = Astro.currentLocale ?? config.site.lang;
 const t = useTranslations(locale);
@@ -33,64 +34,42 @@ const homePath = getRelativeLocaleUrl(locale, "");
     data-home-path={homePath}
     class="app-layout my-1"
   >
-    <section id="hero" class="border-border border-b pt-8 pb-6">
-      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        WardWander
+    <section id="hero" class="pt-10 pb-8 sm:pt-16">
+      <p class="label-caps mb-4">Skylar Simmons &#183; est. 2026</p>
+      <h1 class="font-display my-2 text-5xl leading-none sm:text-7xl">
+        Ward<span class="text-accent italic">&amp;</span>Wander
       </h1>
-      <a
-        target="_blank"
-        href={`${import.meta.env.BASE_URL.replace(/\/?$/, "/")}rss.xml`}
-        class="inline-block"
-        aria-label="RSS Feed"
-        title="RSS Feed"
+      <p
+        class="font-display text-muted-foreground mt-4 text-xl italic sm:text-2xl"
       >
-        <IconRss
-          width={20}
-          height={20}
-          class="stroke-accent scale-125 stroke-3 rtl:-rotate-90"
-        />
-        <span class="sr-only">RSS Feed</span>
-      </a>
-
-      <p>
-        Security, games, and the space between. Notes on offensive security,
-        cyber deception, and red teaming from one side of the table, and
-        tabletop RPG design, zines, and terrain builds from the other. The
-        interesting posts are the ones where the two overlap.
+        Security, games, and the space between.
       </p>
-      <p class="mt-2">
-        Written by Skylar Simmons. More on the{" "}
-        <LinkButton
-          class="hover:text-accent underline decoration-dashed underline-offset-4"
-          href="/about/"
+      <p class="mt-6 max-w-2xl">
+        Notes on offensive security, cyber deception, and red teaming from one
+        side of the table; tabletop RPG design, zines, and terrain builds from
+        the other. The entries worth reading are the ones where the two overlap.
+      </p>
+      <div class="mt-6 flex items-center gap-x-4">
+        <Socials />
+        <a
+          target="_blank"
+          href={`${import.meta.env.BASE_URL.replace(/\/?$/, "/")}rss.xml`}
+          class="label-caps hover:text-accent inline-flex items-center gap-x-1"
+          aria-label="RSS Feed"
+          title="RSS Feed"
         >
-          about page
-        </LinkButton>.
-      </p>
-      {
-        socials.length > 0 && (
-          <div class="mt-4 flex max-sm:flex-col sm:items-center">
-            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">
-              {t.home.socialLinks}:
-            </div>
-            <Socials />
-          </div>
-        )
-      }
+          <IconRss width={14} height={14} class="stroke-current stroke-2" />
+          RSS
+        </a>
+      </div>
     </section>
+
+    <Rule class="" />
 
     {
       featuredPosts.length > 0 && (
-        <section
-          id="featured"
-          class:list={[
-            "pt-12 pb-6",
-            { "border-border border-b": recentPosts.length > 0 },
-          ]}
-        >
-          <h2 class="text-2xl font-semibold tracking-wide">
-            {t.home.featured}
-          </h2>
+        <section id="featured" class="pt-10 pb-4">
+          <h2 class="label-caps">{t.home.featured}</h2>
           <ul>
             {featuredPosts.map(data => (
               <Card variant="h3" {...data} />
@@ -102,10 +81,8 @@ const homePath = getRelativeLocaleUrl(locale, "");
 
     {
       recentPosts.length > 0 && (
-        <section id="recent-posts" class="pt-12 pb-6">
-          <h2 class="text-2xl font-semibold tracking-wide">
-            {t.home.recentPosts}
-          </h2>
+        <section id="recent-posts" class="pt-10 pb-4">
+          <h2 class="label-caps">{t.home.recentPosts}</h2>
           <ul>
             {recentPosts.slice(0, postsConfig.perIndex).map(data => (
               <Card variant="h3" {...data} />
@@ -116,7 +93,10 @@ const homePath = getRelativeLocaleUrl(locale, "");
     }
 
     <div class="my-8 text-center">
-      <LinkButton href={getRelativeLocaleUrl(locale, "posts")}>
+      <LinkButton
+        class="font-display hover:text-accent text-lg"
+        href={getRelativeLocaleUrl(locale, "posts")}
+      >
         {t.home.allPosts}
         <IconArrowRight class="inline-block rtl:-rotate-180" />
       </LinkButton>

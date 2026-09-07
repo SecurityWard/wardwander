@@ -1,5 +1,5 @@
 ---
-title: "Hello, WardWander"
+title: "Hello, Ward & Wander"
 description: "What this site is, why it took so long, and what will show up here."
 pubDatetime: 2026-09-06T09:00:00-04:00
 tags: ["meta"]
@@ -7,7 +7,7 @@ featured: false
 draft: false
 ---
 
-I've been meaning to start this for years. The blocker was never having nothing to say; it was that every attempt turned into a project about the blog instead of a project that produced posts. Theme repos, build pipelines, the works. This time the rules are different: the site is a folder of Markdown files, the theme is somebody else's problem, and hosting costs nothing. If that holds, posts will actually happen.
+For years I have meant to start this. The blocker was never having nothing to say; it was that every attempt turned into a project about the blog instead of a project that produced posts. Theme repos, build pipelines, the works. This time the rules are different: the site is a folder of Markdown files, the theme is somebody else's problem, and hosting costs nothing. If that holds, posts will actually happen.
 
 ## What goes here
 

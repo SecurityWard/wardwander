@@ -3,7 +3,7 @@ import { defineAstroPaperConfig } from "./src/types/config";
 export default defineAstroPaperConfig({
   site: {
     url: "https://wardwander.com/",
-    title: "WardWander",
+    title: "Ward & Wander",
     description: "Security, games, and the space between.",
     author: "Skylar Simmons",
     profile: "https://wardwander.com/about/",
@@ -18,7 +18,7 @@ export default defineAstroPaperConfig({
     scheduledPostMargin: 15 * 60 * 1000,
   },
   features: {
-    lightAndDarkMode: true,
+    lightAndDarkMode: false,
     dynamicOgImage: true,
     showArchives: true,
     showBackButton: true,

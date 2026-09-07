@@ -7,28 +7,27 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
-  --font-app: var(--font-app-mono);
+  --color-ember: var(--ember);
+  --font-app: var(--font-body);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
 }
 
-/* Light theme: warm paper, deep teal accent */
+/*
+  One palette. The site is dark only.
+  Charcoal stone, aged parchment for text, torchlight amber for the accent,
+  a dried-blood red used sparingly.
+*/
 :root,
+[data-theme="dark"],
 [data-theme="light"] {
-  --background: #f7f4ec;
-  --foreground: #23262b;
-  --accent: #0f6e6a;
-  --accent-foreground: #ffffff;
-  --muted: #e5e0d3;
-  --muted-foreground: #5f6670;
-  --border: #dcd6c6;
-}
-
-/* Dark theme: near-black indigo, warded gold accent */
-[data-theme="dark"] {
-  --background: #14161d;
-  --foreground: #e6e4dc;
-  --accent: #e0a94a;
-  --accent-foreground: #14161d;
-  --muted: #262a36;
-  --muted-foreground: #a8adb8;
-  --border: #3a3f4d;
+  --background: #100f0d;
+  --surface: #17150f;
+  --foreground: #d8ccb0;
+  --accent: #d9953c;
+  --accent-foreground: #100f0d;
+  --ember: #9a3b2e;
+  --muted: #26221a;
+  --muted-foreground: #8d8168;
+  --border: #35302a;
 }
