@@ -1,9 +1,9 @@
 ---
 title: "About"
-description: "Who writes WardWander and why it exists."
+description: "Who writes Ward & Wander and why it exists."
 ---
 
-I'm Skylar Simmons. I've spent close to two decades in offensive security and the last several years leading it: red team, adversarial simulation, AI red teaming, and cyber deception programs inside a large enterprise. Before that I served in the U.S. Army. I co-founded FXBG Hackers and help organize BSides NoVA.
+I'm Skylar Simmons. I've spent close to two decades in security and the last several years leading various offensive security teams: red team, adversarial simulation, AI red teaming, and cyber deception programs inside large enterprises. I'm an organizer for multiple security meetups and conferences, trainer, etc.
 
 On the other side of the table, I run BlackBoxGames, a small press for tabletop RPG zines and games. I write adventures, design skirmish rules, build foam dungeon terrain, and play more Commander than I should admit.
 
@@ -13,8 +13,4 @@ The security work lives under the SecurityWard name. The games live under BlackB
 
 ## What to expect
 
-Posts show up when I have something worth saying, which is not on a schedule. Topics will include red team and purple team practice, deception engineering, honeypots and detection, AI-enabled attack research, project write-ups, RPG design notes, zine production, and the occasional terrain build. Nothing here speaks for my employer.
-
-## Elsewhere
-
-Code and security projects are on [GitHub](https://github.com/SecurityWard).
+Posts show up when I have something worth saying, which is not on a schedule. Topics will include red team and purple team practice, deception engineering, honeypots and detection, AI research, project write-ups, RPG design notes, zine production, the occasional rant, etc.. Nothing here speaks for my employer.
